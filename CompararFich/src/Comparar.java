@@ -14,6 +14,7 @@ public class Comparar {
 		String str10 = "";
 		String str20 = "";
 		
+		//Definicion de Variable File
 		FileReader fichero1 = new FileReader(f1);
 		FileReader fichero2 = new FileReader(f2);
 
