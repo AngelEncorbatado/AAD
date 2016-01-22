@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22-ene-2016 8:50:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="programa.Historial" table="HISTORIAL_USUARIO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="fecha" type="java.util.Date">
+            <column name="FECHA" />
+        </property>
+        <property name="sesion" type="java.lang.String">
+            <column name="SESION" />
+        </property>
+        <many-to-one name="usuario" class="programa.Usuario" not-null="true">
+            <column name="ID_USUARIO" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22-ene-2016 9:31:11 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="programa.DatosKM" table="DATOSKM">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment">
+               <param name="property">usuario</param> 
+            </generator>
+        </id>
+        <property name="total" type="int">
+            <column name="TOTAL" />
+        </property>
+        <property name="objetivo" type="int">
+            <column name="OBJETIVO" />
+        </property>
+        <one-to-one name="usuario" class="programa.Usuario" property-ref="datoskm" />
+    </class>
+</hibernate-mapping>
